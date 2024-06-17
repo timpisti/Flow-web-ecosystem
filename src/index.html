@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<base href="/"/> <!-- Ensure the base URL is correct -->
+	<title>Flowwe - JS BASE App</title>
+	<script>
+  window.FlowJSConfig = {
+	"baseUrl": '/',
+	"componentFetchUrl": '/components', //Ensure internal components fetch url is correct
+	"routes": {
+	'/': { component: 'home', file: 'components/home/home.js' },
+	'/articles/:id': { component: 'articles', file: 'components/articles/articles.js' },
+	'/404': { component: 'not-found', file: 'components/not-found/not-found.js' },
+	// Add other routes here
+	},
+	"DebounceTime": 200,
+	"CSPEnabled": false,
+	"ErrorLoggingServerEnabled": true,
+	"RealTimeUpdatesEnabled": false,
+	"logging": true,
+	"errors": true
+	}
+	</script>
+</head>
+<body>
+  
+  <!-- <flowjs-mycomponent></flowjs-mycomponent> -->
+  <!-- <flowjs-externalcomponent fetchURL="https://external.fetch.url"></flowjs-externalcomponent> -->
+  
+  <!-- Ensure the main JS path is correct -->
+  <script src="../dist/main.js"></script>
+</body>
+</html>
